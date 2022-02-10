@@ -1,0 +1,211 @@
+:root {
+  --nord0 : #2e3440;
+  --nord1 : #3b4252;
+  --nord2 : #434c5e;
+  --nord3 : #4c566a;
+  --nord4 : #d8dee9;
+  --nord5 : #e5e9f0;
+  --nord6 : #eceff4;
+  --nord7 : #8fbcbb;
+  --nord8 : #88c0d0;
+  --nord9 : #81a1c1;
+  --nord10: #5e81ac;
+  --nord11: #bf616a;
+  --nord12: #d08770;
+  --nord13: #ebcb8b;
+  --nord14: #a3be8c;
+  --nord15: #b48ead;
+}
+
+.material-icons {
+  font-family   : 'Material Icons';
+  font-weight   : normal;
+  font-style    : normal;
+  font-size     : 24px;
+  /* Preferred icon size */
+  display       : inline-block;
+  line-height   : 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap     : normal;
+  white-space   : nowrap;
+  direction     : ltr;
+
+  /* https://fonts.google.com/icons */
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering        : optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+
+.material-icons.md-18 {
+  font-size: 18px;
+}
+
+.material-icons.md-24 {
+  font-size: 24px;
+}
+
+.material-icons.md-36 {
+  font-size: 36px;
+}
+
+.material-icons.md-48 {
+  font-size: 48px;
+}
+
+
+
+* {
+  box-sizing : border-box;
+  margin     : 0;
+  font-family: 'Rubik', sans-serif;
+  font-weight: 400;
+}
+
+body {
+  display         : flex;
+  flex-direction  : column;
+  min-height      : 100vh;
+  background-color: var(--nord0);
+  color           : var(--nord6)
+}
+
+header {
+  padding  : 2rem 1rem;
+  max-width: 800px;
+  width    : 100%;
+  margin   : 0 auto;
+}
+
+header h1 {
+  font-size    : 2.5rem;
+  font-weight  : bold;
+  margin-bottom: 1rem;
+  color        : var(--nord5);
+}
+
+#new-task-form {
+  display: flex;
+}
+
+input,
+button {
+  appearance: none;
+  border    : none;
+  outline   : none;
+  background: none;
+}
+
+#task-input {
+  flex            : 1 1 0%;
+  background-color: var(--nord1);
+  padding         : 1rem;
+  border-radius   : 1rem;
+  margin-right    : 1rem;
+  color           : var(--nord4);
+  font-size       : 1.25rem;
+}
+
+#task-input::placeholder {
+  color: var(--nord3)
+}
+
+#new-task-submit {
+  color        : var(--nord4);
+  font-size    : 1.25rem;
+  border       : 0.75px solid var(--nord3);
+  padding      : 1rem;
+  border-radius: 1rem;
+  cursor       : pointer;
+  transition   : 0.4s;
+}
+
+#new-task-submit:hover {
+  border-color: var(--nord8);
+  color       : var(--nord8);
+}
+
+#new-task-submit:active {
+  border-color: var(--nord10);
+  color       : var(--nord10);
+}
+
+main {
+  flex     : 1 1 0%;
+  padding  : 2rem 1rem;
+  max-width: 800px;
+  width    : 100%;
+  margin   : 0 auto;
+}
+
+.tast-List {
+  padding: 1rem;
+}
+
+.task-list h2 {
+
+  font-size    : 1.5rem;
+  font-weight  : bold;
+  margin-bottom: 1rem;
+  color        : var(--nord5);
+}
+
+#tasks .task{
+  display: flex;
+  justify-content : space-between;
+  background-color : var(--nord2);
+  padding: 1rem;
+  border-radius : 1rem;
+  border-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+#tasks .task .content .text {
+  color: var(--nord4);
+  font-size: 1.125rem;
+  width : 100%;
+  display: block;
+  transition: 0.4s;
+}
+
+#tasks .task .content .text:not(:read-only) {
+  color: var(--nord10);
+}
+
+#tasks .task .actions {
+  display: flex;
+  margin: 0 -0.5rem;
+
+}
+
+.task .actions button {
+  cursor: pointer;
+  margin: 0 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+  transition   : 0.4s;
+}
+.task .actions button:hover {
+  border-color: var(--nord8);
+  color       : var(--nord8);
+}
+
+.task .actions button:active {
+  border-color: var(--nord10);
+  color       : var(--nord10);
+}
+
+.task .actions .edit{
+  color       : var(--nord4)
+}
+.task .actions .delete{
+  color       : var(--nord4)
+}
